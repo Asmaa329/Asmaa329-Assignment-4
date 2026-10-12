@@ -1,0 +1,413 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 8 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1/" /p:OutDir="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0/" /p:OutputPath="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0/" /p:PublishDir="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\publish/" in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1
+// command took 19.1 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1/" /p:OutDir="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0/" /p:OutputPath="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0/" /p:PublishDir="C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\publish/" --output "C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0/" in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1
+// command took 73.61 sec and exited with 0
+// ***** Done, took 00:01:33 (93.91 sec)   *****
+// Found 8 benchmarks:
+//   ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=100]
+//   ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=100]
+//   ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=1000]
+//   ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=1000]
+//   ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=10000]
+//   ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=10000]
+//   ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=100000]
+//   ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=100000]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AcademyScheduleAnalyzer-ShortRun-1.dll --anonymousPipes 1324 1144 --benchmarkName "AcademyScheduleAnalyzer.ScheduleReportBenchmark.StringConcatenation(Iterations: 100)" --job ShortRun --benchmarkId 0 in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 1585600.00 ns, 1.5856 ms/op
+WorkloadJitting  1: 1 op, 3585400.00 ns, 3.5854 ms/op
+
+OverheadJitting  2: 16 op, 5294200.00 ns, 330.8875 us/op
+WorkloadJitting  2: 16 op, 17460300.00 ns, 1.0913 ms/op
+
+WorkloadPilot    1: 16 op, 5838000.00 ns, 364.8750 us/op
+WorkloadPilot    2: 32 op, 16752900.00 ns, 523.5281 us/op
+WorkloadPilot    3: 64 op, 24438300.00 ns, 381.8484 us/op
+WorkloadPilot    4: 128 op, 48661200.00 ns, 380.1656 us/op
+WorkloadPilot    5: 256 op, 94843200.00 ns, 370.4813 us/op
+WorkloadPilot    6: 512 op, 190567600.00 ns, 372.2023 us/op
+WorkloadPilot    7: 1024 op, 366211500.00 ns, 357.6284 us/op
+WorkloadPilot    8: 2048 op, 722868500.00 ns, 352.9631 us/op
+
+OverheadWarmup   1: 2048 op, 63000.00 ns, 30.7617 ns/op
+OverheadWarmup   2: 2048 op, 58600.00 ns, 28.6133 ns/op
+OverheadWarmup   3: 2048 op, 58000.00 ns, 28.3203 ns/op
+OverheadWarmup   4: 2048 op, 57900.00 ns, 28.2715 ns/op
+OverheadWarmup   5: 2048 op, 66700.00 ns, 32.5684 ns/op
+OverheadWarmup   6: 2048 op, 55400.00 ns, 27.0508 ns/op
+OverheadWarmup   7: 2048 op, 51800.00 ns, 25.2930 ns/op
+OverheadWarmup   8: 2048 op, 56900.00 ns, 27.7832 ns/op
+OverheadWarmup   9: 2048 op, 82000.00 ns, 40.0391 ns/op
+OverheadWarmup  10: 2048 op, 59600.00 ns, 29.1016 ns/op
+
+OverheadActual   1: 2048 op, 74200.00 ns, 36.2305 ns/op
+OverheadActual   2: 2048 op, 74000.00 ns, 36.1328 ns/op
+OverheadActual   3: 2048 op, 67200.00 ns, 32.8125 ns/op
+OverheadActual   4: 2048 op, 64700.00 ns, 31.5918 ns/op
+OverheadActual   5: 2048 op, 186900.00 ns, 91.2598 ns/op
+OverheadActual   6: 2048 op, 63400.00 ns, 30.9570 ns/op
+OverheadActual   7: 2048 op, 59100.00 ns, 28.8574 ns/op
+OverheadActual   8: 2048 op, 67900.00 ns, 33.1543 ns/op
+OverheadActual   9: 2048 op, 56500.00 ns, 27.5879 ns/op
+OverheadActual  10: 2048 op, 56100.00 ns, 27.3926 ns/op
+OverheadActual  11: 2048 op, 57400.00 ns, 28.0273 ns/op
+OverheadActual  12: 2048 op, 72700.00 ns, 35.4980 ns/op
+OverheadActual  13: 2048 op, 74900.00 ns, 36.5723 ns/op
+OverheadActual  14: 2048 op, 54800.00 ns, 26.7578 ns/op
+OverheadActual  15: 2048 op, 58800.00 ns, 28.7109 ns/op
+OverheadActual  16: 2048 op, 65700.00 ns, 32.0801 ns/op
+OverheadActual  17: 2048 op, 57600.00 ns, 28.1250 ns/op
+OverheadActual  18: 2048 op, 55500.00 ns, 27.0996 ns/op
+OverheadActual  19: 2048 op, 58100.00 ns, 28.3691 ns/op
+OverheadActual  20: 2048 op, 55300.00 ns, 27.0020 ns/op
+
+WorkloadWarmup   1: 2048 op, 742512100.00 ns, 362.5547 us/op
+WorkloadWarmup   2: 2048 op, 754689000.00 ns, 368.5005 us/op
+WorkloadWarmup   3: 2048 op, 734491900.00 ns, 358.6386 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 2048 op, 744922700.00 ns, 363.7318 us/op
+WorkloadActual   2: 2048 op, 731577600.00 ns, 357.2156 us/op
+WorkloadActual   3: 2048 op, 722867700.00 ns, 352.9627 us/op
+
+// AfterActualRun
+WorkloadResult   1: 2048 op, 744861450.00 ns, 363.7019 us/op
+WorkloadResult   2: 2048 op, 731516350.00 ns, 357.1857 us/op
+WorkloadResult   3: 2048 op, 722806450.00 ns, 352.9328 us/op
+// GC:  609 0 0 956579840 2048
+// Threading:  0 0 2048
+
+// AfterAll
+// Benchmark Process 9848 has exited with code 0.
+
+Mean = 357.940 μs, StdErr = 3.132 μs (0.87%), N = 3, StdDev = 5.424 μs
+Min = 352.933 μs, Q1 = 355.059 μs, Median = 357.186 μs, Q3 = 360.444 μs, Max = 363.702 μs
+IQR = 5.385 μs, LowerFence = 346.982 μs, UpperFence = 368.521 μs
+ConfidenceInterval = [258.986 μs; 456.894 μs] (CI 99.9%), Margin = 98.954 μs (27.65% of Mean)
+Skewness = 0.14, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 7 (87.5%) benchmark(s) to run. Estimated finish 2026-10-12 12:52 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=100]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AcademyScheduleAnalyzer-ShortRun-1.dll --anonymousPipes 1332 1272 --benchmarkName "AcademyScheduleAnalyzer.ScheduleReportBenchmark.StringBuilderConcatenation(Iterations: 100)" --job ShortRun --benchmarkId 1 in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 2044500.00 ns, 2.0445 ms/op
+WorkloadJitting  1: 1 op, 2855100.00 ns, 2.8551 ms/op
+
+OverheadJitting  2: 16 op, 5193500.00 ns, 324.5938 us/op
+WorkloadJitting  2: 16 op, 6142900.00 ns, 383.9313 us/op
+
+WorkloadPilot    1: 16 op, 601200.00 ns, 37.5750 us/op
+WorkloadPilot    2: 32 op, 1822100.00 ns, 56.9406 us/op
+WorkloadPilot    3: 64 op, 6107900.00 ns, 95.4359 us/op
+WorkloadPilot    4: 128 op, 7990400.00 ns, 62.4250 us/op
+WorkloadPilot    5: 256 op, 8214500.00 ns, 32.0879 us/op
+WorkloadPilot    6: 512 op, 15099600.00 ns, 29.4914 us/op
+WorkloadPilot    7: 1024 op, 32818900.00 ns, 32.0497 us/op
+WorkloadPilot    8: 2048 op, 65171300.00 ns, 31.8219 us/op
+WorkloadPilot    9: 4096 op, 162967800.00 ns, 39.7871 us/op
+WorkloadPilot   10: 8192 op, 148964300.00 ns, 18.1841 us/op
+WorkloadPilot   11: 16384 op, 307156800.00 ns, 18.7474 us/op
+WorkloadPilot   12: 32768 op, 585528400.00 ns, 17.8689 us/op
+
+OverheadWarmup   1: 32768 op, 919600.00 ns, 28.0640 ns/op
+OverheadWarmup   2: 32768 op, 988900.00 ns, 30.1788 ns/op
+OverheadWarmup   3: 32768 op, 1014000.00 ns, 30.9448 ns/op
+OverheadWarmup   4: 32768 op, 1009400.00 ns, 30.8044 ns/op
+OverheadWarmup   5: 32768 op, 1006800.00 ns, 30.7251 ns/op
+OverheadWarmup   6: 32768 op, 991800.00 ns, 30.2673 ns/op
+OverheadWarmup   7: 32768 op, 1012500.00 ns, 30.8990 ns/op
+OverheadWarmup   8: 32768 op, 1005000.00 ns, 30.6702 ns/op
+
+OverheadActual   1: 32768 op, 1022900.00 ns, 31.2164 ns/op
+OverheadActual   2: 32768 op, 1159000.00 ns, 35.3699 ns/op
+OverheadActual   3: 32768 op, 963400.00 ns, 29.4006 ns/op
+OverheadActual   4: 32768 op, 940500.00 ns, 28.7018 ns/op
+OverheadActual   5: 32768 op, 948800.00 ns, 28.9551 ns/op
+OverheadActual   6: 32768 op, 961700.00 ns, 29.3488 ns/op
+OverheadActual   7: 32768 op, 958200.00 ns, 29.2419 ns/op
+OverheadActual   8: 32768 op, 944500.00 ns, 28.8239 ns/op
+OverheadActual   9: 32768 op, 950500.00 ns, 29.0070 ns/op
+OverheadActual  10: 32768 op, 946900.00 ns, 28.8971 ns/op
+OverheadActual  11: 32768 op, 951400.00 ns, 29.0344 ns/op
+OverheadActual  12: 32768 op, 946000.00 ns, 28.8696 ns/op
+OverheadActual  13: 32768 op, 952400.00 ns, 29.0649 ns/op
+OverheadActual  14: 32768 op, 945900.00 ns, 28.8666 ns/op
+OverheadActual  15: 32768 op, 964300.00 ns, 29.4281 ns/op
+
+WorkloadWarmup   1: 32768 op, 585219300.00 ns, 17.8595 us/op
+WorkloadWarmup   2: 32768 op, 628483700.00 ns, 19.1798 us/op
+WorkloadWarmup   3: 32768 op, 613873100.00 ns, 18.7339 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 32768 op, 598790800.00 ns, 18.2736 us/op
+WorkloadActual   2: 32768 op, 616945000.00 ns, 18.8277 us/op
+WorkloadActual   3: 32768 op, 594289300.00 ns, 18.1363 us/op
+
+// AfterActualRun
+WorkloadResult   1: 32768 op, 597839400.00 ns, 18.2446 us/op
+WorkloadResult   2: 32768 op, 615993600.00 ns, 18.7986 us/op
+WorkloadResult   3: 32768 op, 593337900.00 ns, 18.1072 us/op
+// GC:  450 0 0 709623808 32768
+// Threading:  0 0 32768
+
+// AfterAll
+// Benchmark Process 25124 has exited with code 0.
+
+Mean = 18.383 μs, StdErr = 0.211 μs (1.15%), N = 3, StdDev = 0.366 μs
+Min = 18.107 μs, Q1 = 18.176 μs, Median = 18.245 μs, Q3 = 18.522 μs, Max = 18.799 μs
+IQR = 0.346 μs, LowerFence = 17.657 μs, UpperFence = 19.040 μs
+ConfidenceInterval = [11.706 μs; 25.061 μs] (CI 99.9%), Margin = 6.678 μs (36.32% of Mean)
+Skewness = 0.32, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 6 (75.0%) benchmark(s) to run. Estimated finish 2026-10-12 12:52 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AcademyScheduleAnalyzer-ShortRun-1.dll --anonymousPipes 1276 1144 --benchmarkName "AcademyScheduleAnalyzer.ScheduleReportBenchmark.StringConcatenation(Iterations: 1000)" --job ShortRun --benchmarkId 2 in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 2145800.00 ns, 2.1458 ms/op
+WorkloadJitting  1: 1 op, 57311800.00 ns, 57.3118 ms/op
+
+WorkloadPilot    1: 2 op, 87240400.00 ns, 43.6202 ms/op
+WorkloadPilot    2: 3 op, 136846700.00 ns, 45.6156 ms/op
+WorkloadPilot    3: 4 op, 212418200.00 ns, 53.1046 ms/op
+WorkloadPilot    4: 5 op, 212512200.00 ns, 42.5024 ms/op
+WorkloadPilot    5: 6 op, 253480700.00 ns, 42.2468 ms/op
+WorkloadPilot    6: 7 op, 360485700.00 ns, 51.4980 ms/op
+WorkloadPilot    7: 8 op, 330729600.00 ns, 41.3412 ms/op
+WorkloadPilot    8: 9 op, 372895500.00 ns, 41.4328 ms/op
+WorkloadPilot    9: 10 op, 423163700.00 ns, 42.3164 ms/op
+WorkloadPilot   10: 11 op, 479601100.00 ns, 43.6001 ms/op
+WorkloadPilot   11: 12 op, 516612300.00 ns, 43.0510 ms/op
+
+WorkloadWarmup   1: 12 op, 515217900.00 ns, 42.9348 ms/op
+WorkloadWarmup   2: 12 op, 638435000.00 ns, 53.2029 ms/op
+WorkloadWarmup   3: 12 op, 603501400.00 ns, 50.2918 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 12 op, 517161100.00 ns, 43.0968 ms/op
+WorkloadActual   2: 12 op, 592945300.00 ns, 49.4121 ms/op
+WorkloadActual   3: 12 op, 592589000.00 ns, 49.3824 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 12 op, 517161100.00 ns, 43.0968 ms/op
+WorkloadResult   2: 12 op, 592945300.00 ns, 49.4121 ms/op
+WorkloadResult   3: 12 op, 592589000.00 ns, 49.3824 ms/op
+// GC:  367 79 24 552870648 12
+// Threading:  0 0 12
+
+// AfterAll
+// Benchmark Process 18932 has exited with code 0.
+
+Mean = 47.297 ms, StdErr = 2.100 ms (4.44%), N = 3, StdDev = 3.638 ms
+Min = 43.097 ms, Q1 = 46.240 ms, Median = 49.382 ms, Q3 = 49.397 ms, Max = 49.412 ms
+IQR = 3.158 ms, LowerFence = 41.503 ms, UpperFence = 54.134 ms
+ConfidenceInterval = [-19.067 ms; 113.661 ms] (CI 99.9%), Margin = 66.364 ms (140.31% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 5 (62.5%) benchmark(s) to run. Estimated finish 2026-10-12 12:52 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AcademyScheduleAnalyzer-ShortRun-1.dll --anonymousPipes 1300 1272 --benchmarkName "AcademyScheduleAnalyzer.ScheduleReportBenchmark.StringBuilderConcatenation(Iterations: 1000)" --job ShortRun --benchmarkId 3 in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 2249600.00 ns, 2.2496 ms/op
+WorkloadJitting  1: 1 op, 3830800.00 ns, 3.8308 ms/op
+
+OverheadJitting  2: 16 op, 5226500.00 ns, 326.6563 us/op
+WorkloadJitting  2: 16 op, 27253100.00 ns, 1.7033 ms/op
+
+WorkloadPilot    1: 16 op, 6242100.00 ns, 390.1313 us/op
+WorkloadPilot    2: 32 op, 19237100.00 ns, 601.1594 us/op
+WorkloadPilot    3: 64 op, 35348100.00 ns, 552.3141 us/op
+WorkloadPilot    4: 128 op, 76861800.00 ns, 600.4828 us/op
+WorkloadPilot    5: 256 op, 164073800.00 ns, 640.9133 us/op
+WorkloadPilot    6: 512 op, 221220100.00 ns, 432.0705 us/op
+WorkloadPilot    7: 1024 op, 444008500.00 ns, 433.6021 us/op
+WorkloadPilot    8: 2048 op, 885597200.00 ns, 432.4205 us/op
+
+OverheadWarmup   1: 2048 op, 83600.00 ns, 40.8203 ns/op
+OverheadWarmup   2: 2048 op, 53100.00 ns, 25.9277 ns/op
+OverheadWarmup   3: 2048 op, 78400.00 ns, 38.2813 ns/op
+OverheadWarmup   4: 2048 op, 55300.00 ns, 27.0020 ns/op
+OverheadWarmup   5: 2048 op, 58500.00 ns, 28.5645 ns/op
+OverheadWarmup   6: 2048 op, 60300.00 ns, 29.4434 ns/op
+OverheadWarmup   7: 2048 op, 62200.00 ns, 30.3711 ns/op
+OverheadWarmup   8: 2048 op, 60600.00 ns, 29.5898 ns/op
+
+OverheadActual   1: 2048 op, 59500.00 ns, 29.0527 ns/op
+OverheadActual   2: 2048 op, 60800.00 ns, 29.6875 ns/op
+OverheadActual   3: 2048 op, 79100.00 ns, 38.6230 ns/op
+OverheadActual   4: 2048 op, 60700.00 ns, 29.6387 ns/op
+OverheadActual   5: 2048 op, 61800.00 ns, 30.1758 ns/op
+OverheadActual   6: 2048 op, 70800.00 ns, 34.5703 ns/op
+OverheadActual   7: 2048 op, 56600.00 ns, 27.6367 ns/op
+OverheadActual   8: 2048 op, 56500.00 ns, 27.5879 ns/op
+OverheadActual   9: 2048 op, 78400.00 ns, 38.2813 ns/op
+OverheadActual  10: 2048 op, 56100.00 ns, 27.3926 ns/op
+OverheadActual  11: 2048 op, 87500.00 ns, 42.7246 ns/op
+OverheadActual  12: 2048 op, 79500.00 ns, 38.8184 ns/op
+OverheadActual  13: 2048 op, 58100.00 ns, 28.3691 ns/op
+OverheadActual  14: 2048 op, 69400.00 ns, 33.8867 ns/op
+OverheadActual  15: 2048 op, 69900.00 ns, 34.1309 ns/op
+OverheadActual  16: 2048 op, 80400.00 ns, 39.2578 ns/op
+OverheadActual  17: 2048 op, 69900.00 ns, 34.1309 ns/op
+OverheadActual  18: 2048 op, 59800.00 ns, 29.1992 ns/op
+OverheadActual  19: 2048 op, 78200.00 ns, 38.1836 ns/op
+OverheadActual  20: 2048 op, 51900.00 ns, 25.3418 ns/op
+
+WorkloadWarmup   1: 2048 op, 898251200.00 ns, 438.5992 us/op
+WorkloadWarmup   2: 2048 op, 882407100.00 ns, 430.8628 us/op
+WorkloadWarmup   3: 2048 op, 872041500.00 ns, 425.8015 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 2048 op, 885980500.00 ns, 432.6077 us/op
+WorkloadActual   2: 2048 op, 889372600.00 ns, 434.2640 us/op
+WorkloadActual   3: 2048 op, 896951600.00 ns, 437.9646 us/op
+
+// AfterActualRun
+WorkloadResult   1: 2048 op, 885914900.00 ns, 432.5756 us/op
+WorkloadResult   2: 2048 op, 889307000.00 ns, 434.2319 us/op
+WorkloadResult   3: 2048 op, 896886000.00 ns, 437.9326 us/op
+// GC:  119 58 58 402787360 2048
+// Threading:  0 0 2048
+
+// AfterAll
+// Benchmark Process 16184 has exited with code 0.
+
+Mean = 434.913 μs, StdErr = 1.584 μs (0.36%), N = 3, StdDev = 2.743 μs
+Min = 432.576 μs, Q1 = 433.404 μs, Median = 434.232 μs, Q3 = 436.082 μs, Max = 437.933 μs
+IQR = 2.678 μs, LowerFence = 429.386 μs, UpperFence = 440.100 μs
+ConfidenceInterval = [384.876 μs; 484.951 μs] (CI 99.9%), Margin = 50.038 μs (11.51% of Mean)
+Skewness = 0.23, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 4 (50.0%) benchmark(s) to run. Estimated finish 2026-10-12 12:52 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ScheduleReportBenchmark.StringConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AcademyScheduleAnalyzer-ShortRun-1.dll --anonymousPipes 1216 1212 --benchmarkName "AcademyScheduleAnalyzer.ScheduleReportBenchmark.StringConcatenation(Iterations: 10000)" --job ShortRun --benchmarkId 4 in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 1562000.00 ns, 1.5620 ms/op
+WorkloadJitting  1: 1 op, 5448216800.00 ns, 5.4482 s/op
+
+OverheadJitting  2: 1 op, 1600.00 ns, 1.6000 us/op
+WorkloadJitting  2: 1 op, 5336394300.00 ns, 5.3364 s/op
+
+WorkloadWarmup   1: 1 op, 5394710900.00 ns, 5.3947 s/op
+WorkloadWarmup   2: 1 op, 5670013500.00 ns, 5.6700 s/op
+WorkloadWarmup   3: 1 op, 5762962500.00 ns, 5.7630 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 5481382600.00 ns, 5.4814 s/op
+WorkloadActual   2: 1 op, 5262374100.00 ns, 5.2624 s/op
+WorkloadActual   3: 1 op, 5605939100.00 ns, 5.6059 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 5481382600.00 ns, 5.4814 s/op
+WorkloadResult   2: 1 op, 5262374100.00 ns, 5.2624 s/op
+WorkloadResult   3: 1 op, 5605939100.00 ns, 5.6059 s/op
+// GC:  1205 1178 868 4600960576 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 18136 has exited with code 0.
+
+Mean = 5.450 s, StdErr = 0.100 s (1.84%), N = 3, StdDev = 0.174 s
+Min = 5.262 s, Q1 = 5.372 s, Median = 5.481 s, Q3 = 5.544 s, Max = 5.606 s
+IQR = 0.172 s, LowerFence = 5.114 s, UpperFence = 5.801 s
+ConfidenceInterval = [2.277 s; 8.623 s] (CI 99.9%), Margin = 3.173 s (58.22% of Mean)
+Skewness = -0.18, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 3 (37.5%) benchmark(s) to run. Estimated finish 2026-10-12 12:53 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: ScheduleReportBenchmark.StringBuilderConcatenation: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3) [Iterations=10000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AcademyScheduleAnalyzer-ShortRun-1.dll --anonymousPipes 1292 1344 --benchmarkName "AcademyScheduleAnalyzer.ScheduleReportBenchmark.StringBuilderConcatenation(Iterations: 10000)" --job ShortRun --benchmarkId 5 in C:\simulation\Assignment 4\Asmaa329-Assignment-4\AcademyScheduleAnalyzer\bin\Release\net10.0\AcademyScheduleAnalyzer-ShortRun-1\bin\Release\net10.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 1984100.00 ns, 1.9841 ms/op
+WorkloadJitting  1: 1 op, 14334400.00 ns, 14.3344 ms/op
+
+OverheadJitting  2: 16 op, 4942400.00 ns, 308.9000 us/op
+WorkloadJitting  2: 16 op, 86460900.00 ns, 5.4038 ms/op
+
+WorkloadPilot    1: 16 op, 66825400.00 ns, 4.1766 ms/op
+WorkloadPilot    2: 32 op, 160504800.00 ns, 5.0158 ms/op
+WorkloadPilot    3: 64 op, 260537400.00 ns, 4.0709 ms/op
+WorkloadPilot    4: 128 op, 464277800.00 ns, 3.6272 ms/op
+WorkloadPilot    5: 256 op, 861562600.00 ns, 3.3655 ms/op
+
+OverheadWarmup   1: 256 op, 16200.00 ns, 63.2813 ns/op
+OverheadWarmup   2: 256 op, 10300.00 ns, 40.2344 ns/op
+OverheadWarmup   3: 256 op, 10500.00 ns, 41.0156 ns/op
+OverheadWarmup   4: 256 op, 10300.00 ns, 40.2344 ns/op
+OverheadWarmup   5: 256 op, 19800.00 ns, 77.3438 ns/op

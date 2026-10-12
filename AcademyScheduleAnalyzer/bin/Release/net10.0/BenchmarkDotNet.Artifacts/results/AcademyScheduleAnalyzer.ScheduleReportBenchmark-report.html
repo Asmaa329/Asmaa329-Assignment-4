@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>AcademyScheduleAnalyzer.ScheduleReportBenchmark-20261012-134951</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 10 (10.0.19045.6466/22H2/2022Update)
+Intel Core i5-5200U CPU 2.20GHz (Broadwell), 1 CPU, 4 logical and 2 physical cores
+.NET SDK 10.0.401
+  [Host]   : .NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+  ShortRun : .NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code>Job=ShortRun  IterationCount=3  LaunchCount=1  
+WarmupCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>Method              </th><th>Iterations</th><th>Mean      </th><th>Error     </th><th>StdDev  </th><th>Gen0  </th><th>Gen1  </th><th>Gen2 </th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>StringConcatenation</td><td>100</td><td>82.437 &mu;s</td><td>117.764 &mu;s</td><td>6.4551 &mu;s</td><td>297.6074</td><td>-</td><td>-</td><td>456.13 KB</td>
+</tr><tr><td>StringBuilderConcatenation</td><td>100</td><td>4.655 &mu;s</td><td>5.499 &mu;s</td><td>0.3014 &mu;s</td><td>13.7405</td><td>-</td><td>-</td><td>21.15 KB</td>
+</tr><tr><td>StringConcatenation</td><td>1000</td><td>11,021.904 &mu;s</td><td>22,524.110 &mu;s</td><td>1,234.6225 &mu;s</td><td>30921.8750</td><td>6921.8750</td><td>2000.0000</td><td>44992.72 KB</td>
+</tr><tr><td>StringBuilderConcatenation</td><td>1000</td><td>130.370 &mu;s</td><td>153.602 &mu;s</td><td>8.4195 &mu;s</td><td>57.3730</td><td>28.5645</td><td>28.5645</td><td>192.06 KB</td>
+</tr><tr><td>StringConcatenation</td><td>10000</td><td>1,763,183.300 &mu;s</td><td>754,528.663 &mu;s</td><td>41,358.2623 &mu;s</td><td>1152000.0000</td><td>1125000.0000</td><td>855000.0000</td><td>4493117.71 KB</td>
+</tr><tr><td>StringBuilderConcatenation</td><td>10000</td><td>1,160.077 &mu;s</td><td>1,126.407 &mu;s</td><td>61.7422 &mu;s</td><td>248.0469</td><td>248.0469</td><td>248.0469</td><td>1816.89 KB</td>
+</tr><tr><td>StringConcatenation</td><td>100000</td><td>1,735,211.833 &mu;s</td><td>1,333,336.177 &mu;s</td><td>73,084.6553 &mu;s</td><td>1351000.0000</td><td>1324000.0000</td><td>934000.0000</td><td>4493160.06 KB</td>
+</tr><tr><td>StringBuilderConcatenation</td><td>100000</td><td>18,303.599 &mu;s</td><td>12,664.176 &mu;s</td><td>694.1662 &mu;s</td><td>2468.7500</td><td>2000.0000</td><td>968.7500</td><td>18024.5 KB</td>
+</tr></tbody></table>
+</body>
+</html>
